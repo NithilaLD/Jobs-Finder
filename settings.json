@@ -1,0 +1,316 @@
+{
+  "scan_time": "07:00",
+  "sources": [
+    {
+      "id": 1790746530349,
+      "name": "Acsys Networks",
+      "url": "https://www.acsysnetworks.com/careers",
+      "kind": "Company",
+      "on": true,
+      "note": ""
+    },
+    {
+      "id": 1790746530351,
+      "name": "Amplaz",
+      "url": "https://amplaz.com/careers/",
+      "kind": "Company",
+      "on": true,
+      "note": ""
+    },
+    {
+      "id": 1790746530355,
+      "name": "Citadel Securities",
+      "url": "https://www.citadelsecurities.com/careers",
+      "kind": "Company",
+      "on": true,
+      "note": ""
+    },
+    {
+      "id": 1790746530356,
+      "name": "Comun Labs",
+      "url": "https://comunlabs.com/careers/",
+      "kind": "Company",
+      "on": true,
+      "note": ""
+    },
+    {
+      "id": 1790746530359,
+      "name": "Cube Networks",
+      "url": "https://cubenetworks.com.au/careers-at-cube/",
+      "kind": "Company",
+      "on": true,
+      "note": ""
+    },
+    {
+      "id": 1790746530360,
+      "name": "Delivergate",
+      "url": "https://www.delivergate.com/about/careers",
+      "kind": "Company",
+      "on": true,
+      "note": ""
+    },
+    {
+      "id": 1790746530361,
+      "name": "Deltaspike",
+      "url": "https://deltaspike.io/support/#career",
+      "kind": "Company",
+      "on": true,
+      "note": ""
+    },
+    {
+      "id": 1790746530366,
+      "name": "EY",
+      "url": "https://www.ey.com/en_gl/careers",
+      "kind": "Company",
+      "on": true,
+      "note": ""
+    },
+    {
+      "id": 1790746530368,
+      "name": "Fcode Labs",
+      "url": "https://www.fcodelabs.com/careers",
+      "kind": "Company",
+      "on": true,
+      "note": ""
+    },
+    {
+      "id": 1790746530369,
+      "name": "Fida Global",
+      "url": "https://www.fidaglobal.com/support.html",
+      "kind": "Company",
+      "on": true,
+      "note": ""
+    },
+    {
+      "id": 1790746530370,
+      "name": "Fortude",
+      "url": "https://careers.fortude.co/",
+      "kind": "Company",
+      "on": true,
+      "note": ""
+    },
+    {
+      "id": 1790746530371,
+      "name": "GTN",
+      "url": "https://gtngroup.com/global/careers/",
+      "kind": "Company",
+      "on": true,
+      "note": ""
+    },
+    {
+      "id": 1790746530374,
+      "name": "Hutch",
+      "url": "https://hutch.lk/careers/",
+      "kind": "Company",
+      "on": true,
+      "note": ""
+    },
+    {
+      "id": 1790746530376,
+      "name": "IFS",
+      "url": "https://www.ifs.com/en/about/careers",
+      "kind": "Company",
+      "on": true,
+      "note": ""
+    },
+    {
+      "id": 1790746530378,
+      "name": "Innodata",
+      "url": "https://careers.innodata.com/",
+      "kind": "Company",
+      "on": true,
+      "note": ""
+    },
+    {
+      "id": 1790746530380,
+      "name": "ITS Data Link ",
+      "url": "https://its.lk/career.html",
+      "kind": "Company",
+      "on": true,
+      "note": ""
+    },
+    {
+      "id": 1790746530382,
+      "name": "Ken Research",
+      "url": "https://www.kenresearch.com/careers/",
+      "kind": "Company",
+      "on": true,
+      "note": ""
+    },
+    {
+      "id": 1790746530385,
+      "name": "Levein Group",
+      "url": "https://leveingroup.com/jobs/",
+      "kind": "Company",
+      "on": true,
+      "note": ""
+    },
+    {
+      "id": 1790746530388,
+      "name": "MongoDB",
+      "url": "https://www.mongodb.com/company/careers",
+      "kind": "Company",
+      "on": true,
+      "note": ""
+    },
+    {
+      "id": 1790746530392,
+      "name": "PeoplesHR",
+      "url": "https://blog.peopleshr.com/careers/",
+      "kind": "Company",
+      "on": true,
+      "note": ""
+    },
+    {
+      "id": 1790746530395,
+      "name": "Riskonnect",
+      "url": "https://riskonnect.com/en-gb/company/careers/",
+      "kind": "Company",
+      "on": true,
+      "note": ""
+    },
+    {
+      "id": 1790746530398,
+      "name": "Schneider Electric",
+      "url": "https://www.se.com/ww/en/about-us/careers/",
+      "kind": "Company",
+      "on": true,
+      "note": ""
+    },
+    {
+      "id": 1790746530407,
+      "name": "Unison Group",
+      "url": "https://unisongroup.com/career",
+      "kind": "Company",
+      "on": true,
+      "note": ""
+    },
+    {
+      "id": 1790746530408,
+      "name": "Vampior Designs",
+      "url": "https://careers.vampiordesigns.com/",
+      "kind": "Company",
+      "on": true,
+      "note": ""
+    },
+    {
+      "id": 1790746530411,
+      "name": "Virtusa",
+      "url": "https://www.virtusa.com/careers/",
+      "kind": "Company",
+      "on": true,
+      "note": ""
+    },
+    {
+      "id": 1790746530412,
+      "name": "VitalHub",
+      "url": "https://www.vitalhub.lk/jobs",
+      "kind": "Company",
+      "on": true,
+      "note": ""
+    },
+    {
+      "id": 1790746530413,
+      "name": "Web Lankan",
+      "url": "https://www.weblankan.com/careers/",
+      "kind": "Company",
+      "on": true,
+      "note": ""
+    },
+    {
+      "id": 1790746530414,
+      "name": "WIA Systems",
+      "url": "https://www.wiasystems.com/careers",
+      "kind": "Company",
+      "on": true,
+      "note": ""
+    }
+  ],
+  "profile": {
+    "roles": [
+      "Cyber Security Analyst",
+      "SOC Analyst",
+      "Cybersecurity Intern",
+      "Information Security Analyst",
+      "Associate Software Engineer",
+      "Junior Software Engineer",
+      "Software Engineer Intern",
+      "Junior Web Developer",
+      "Full Stack Developer",
+      "React Developer",
+      "Python Developer",
+      "Junior Data Analyst",
+      "Data Analyst Intern",
+      "Network Security Engineer",
+      "IT Support Specialist"
+    ],
+    "skills": [
+      "Python",
+      "React.js",
+      "JavaScript",
+      "TypeScript",
+      "Node.js",
+      "FastAPI",
+      "PHP",
+      "Cybersecurity",
+      "Network Defense",
+      "Intrusion Detection",
+      "Suricata",
+      "Wireshark",
+      "BurpSuite",
+      "PostgreSQL",
+      "MySQL",
+      "Linux",
+      "Bash",
+      "Git",
+      "Docker",
+      "Data Analytics",
+      "Pandas",
+      "NumPy",
+      "Machine Learning",
+      "Power BI",
+      "Java",
+      "C#",
+      "HTML",
+      "CSS",
+      "Express.js",
+      "GDPR"
+    ],
+    "education": [
+      "Bachelor",
+      "BSc",
+      "Information Technology",
+      "Cyber Security",
+      "Computer Science",
+      "Software Engineering",
+      "Computing",
+      "Data Science",
+      "Undergraduate",
+      "University of Moratuwa",
+      "Victoria University",
+      "NSBM"
+    ],
+    "locations": [
+      "Sri Lanka",
+      "Colombo",
+      "Western Province",
+      "Remote",
+      "Hybrid",
+      "Australia",
+      "UK",
+      "US",
+      "Singapore"
+    ],
+    "levels": [
+      "Internship",
+      "Entry level",
+      "Graduate",
+      "Junior",
+      "Trainee",
+      "Associate",
+      "Undergraduate"
+    ],
+    "time": "07:00",
+    "min": 50
+  }
+}
