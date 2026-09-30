@@ -102,6 +102,22 @@ This configuration allows users to maintain and manage a centralized collection 
 * Internet connection for scanning external career websites
 * Windows operating system for the included `start.bat` script
 
+## Platform Compatibility
+
+Jobs Finder provides platform-specific versions to ensure compatibility across different operating systems.
+
+| Platform | Branch      |
+| -------- | ----------- |
+| Windows  | `main`      |
+| macOS    | `mac_linux` |
+| Linux    | `mac_linux` |
+
+The `main` branch is intended for **Windows** users.
+
+Users running **macOS or Linux** should switch to the [`mac_linux`](https://github.com/NithilaLD/Jobs-Finder/tree/mac_linux) branch and follow the installation and usage instructions provided there.
+
+Make sure to use the branch corresponding to your operating system before installing or running the application.
+
 ## Installation
 
 Clone the repository:
