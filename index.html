@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>Jobs Finder</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <script>
+        (function () {
+            try {
+                var t = localStorage.getItem('jf-theme');
+                if (t !== 'light' && t !== 'dark') {
+                    t = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+                }
+                document.documentElement.setAttribute('data-theme', t);
+            } catch (e) {
+                document.documentElement.setAttribute('data-theme', 'dark');
+            }
+        })();
+    </script>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="wrap">
+        <header class="app-header">
+            <div class="brand">
+                <div class="logo-slot" id="logoSlot"><img src="logo.png" alt="Jobs Finder logo"></div>
+                <div class="brand-copy"><span class="eyebrow">Career Dashboard</span>
+                    <h1 class="jf">Jobs Finder</h1>
+                </div>
+            </div>
+            <div class="head-actions">
+                <div class="next" id="next"></div>
+                <span class="found" id="scanmsg" aria-live="polite"></span>
+                <button class="b g" id="scan">Scan Now</button>
+                <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch to light mode"
+                    title="Switch to light mode">
+                    <svg class="icon-sun" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <circle cx="12" cy="12" r="4" />
+                        <path
+                            d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" />
+                    </svg>
+                    <svg class="icon-moon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+                    </svg>
+                </button>
+            </div>
+        </header>
+        <div class="nav-bar-row">
+            <nav id="tabs"><button data-t="jobs" class="on">Jobs</button><button
+                    data-t="sources">Sources</button><button data-t="profile">Profile</button><button
+                    data-t="import">Import</button></nav>
+            <div class="stats" id="stats"></div>
+        </div>
+        <section id="t-jobs">
+            <div class="panel" id="fil">
+                <div class="filters">
+                    <div><label for="q">Search</label><input id="q" placeholder="Title, Company, Skill"></div>
+                    <div><label for="fs">Source</label><select id="fs"></select></div>
+                    <div><label for="fl">Location</label><select id="fl"></select></div>
+                    <div><label for="ft">Job Type</label><select id="ft"></select></div>
+                    <div><label for="fe">Level</label><select id="fe"></select></div>
+                    <div><label for="fst">Work Mode</label><select id="fst"></select></div>
+                    <div><label for="so">Sort by</label><select id="so">
+                            <option value="score">Best Match</option>
+                            <option value="date">Newest</option>
+                            <option value="company">Company</option>
+                        </select></div>
+                    <div><label for="fm">Minimum Match: <span id="fmv"></span>%</label><input id="fm" type="range"
+                            min="0" max="100" step="5"></div>
+
+                    <div><button class="b g" id="reset">Reset Filters</button></div>
+                </div>
+                <div id="list"></div>
+        </section>
+        <section id="t-sources" hidden>
+            <div class="panel">
+                <div class="grid2">
+                    <div><label for="sn">Name</label><input id="sn" placeholder="Linekedin"></div>
+                    <div><label for="su">Search or Careers URL</label><input id="su" placeholder="https://..."></div>
+                    <div><label for="sk">Type</label><select id="sk">
+                            <option>Company</option>
+                            <option>Recuitement Agency</option>
+                        </select></div>
+                    <div style="align-self:end"><button class="b" id="addsrc">Add Source</button></div>
+                </div>
+            </div>
+            <div class="panel">
+                <label for="sf">Find a Source</label><input id="sf" placeholder="Name, URL or Type"><small
+                    id="srccount"></small>
+                <p><small>Some Sites Block Automated Scanning or Need an API or Login. Add a Source only if its Terms
+                        Allow it, and Prefer Official Feeds or APIs.</small></p>
+            </div>
+            <div class="panel scroll" id="srctable"></div>
+        </section>
+        <section id="t-profile" hidden>
+            <div class="panel">
+                <div class="grid2">
+                    <div><label for="pr">Target Roles</label><textarea id="pr" rows="12"></textarea></div>
+                    <div><label for="ps">Skills</label><textarea id="ps" rows="12"></textarea></div>
+                    <div><label for="pe">Education Keywords</label><textarea id="pe" rows="12"></textarea></div>
+                    <div><label for="pl">Locations</label><textarea id="pl" rows="12"></textarea></div>
+                    <div><label for="pv">Experience Levels</label><textarea id="pv" rows="12"></textarea></div>
+                    <div><label for="pt">Daily Scan Time</label><input id="pt" type="time"><label for="pm"
+                            style="margin-top:8px">Show Jobs from Match %</label><input id="pm" type="number" min="0"
+                            max="100"><br><br>
+                        <div><button class="b" id="saveprof">Save profile</button></div>
+                    </div>
+                </div>
+                <p id="profmsg"><small>Separate Items with Commas. Score Weights: Skills 40, Education 20, Experience
+                        15, Location 10, Title 10, Extra Skills 5.</small></p>
+            </div>
+        </section>
+        <section id="t-import" hidden>
+            <div class="panel">
+                <label for="imp">Jobs JSON</label>
+                <textarea id="imp" rows="11"
+                    placeholder='[{"title":"Junior Data Analyst","company":"ABC","location":"Colombo","type":"Full-time","level":"Entry level","remote":"onsite","skills":["Python","SQL"],"education":"Bachelor degree in IT","salary":"LKR 90,000","posted":"2026-09-28T04:00:00Z","url":"https://...","source":"TopJobs","description":"..."}]'></textarea>
+                <p class="acts"><button class="b" id="doimp">Import Jobs</button><button class="b g" id="clr">Remove All
+                        Jobs</button><span id="impmsg" class="found"></span></p>
+            </div>
+        </section>
+        <footer class="app-footer">
+            <p>© Copyright Dulan Nithila Liyanarachchi. All Rights Reserved. For any Query Reach me at <a
+                    href="mailto:nithila0411@gmail.com">nithila0411@gmail.com</a></p>
+            <p><small>Last Updated: September 30, 2026</small></p><br>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
