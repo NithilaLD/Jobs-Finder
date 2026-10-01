@@ -267,6 +267,14 @@
         }
     });
     $('#reset').onclick = function () { F = {}; S.filt = F; save(); render() };
+    $('#themeToggle').onclick = function () {
+        var next = document.documentElement.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+        document.documentElement.setAttribute('data-theme', next);
+        try { localStorage.setItem('jf-theme', next) } catch (e) { }
+        var label = next === 'light' ? 'Switch to dark mode' : 'Switch to light mode';
+        $('#themeToggle').setAttribute('aria-label', label);
+        $('#themeToggle').setAttribute('title', label);
+    };
 
     $('#addsrc').onclick = function () { var n = $('#sn').value.trim(), u = $('#su').value.trim(); if (!n || !/^https?:\/\//.test(u)) { alert('Enter a name and a URL starting with http:// or https://'); return } S.sources.push({ id: Date.now(), name: n, url: u, kind: $('#sk').value, on: true }); $('#sn').value = $('#su').value = ''; save(); syncScanner(); srcs() };
     $('#srctable').addEventListener('click', function (e) { var d = e.target.dataset.del; if (d) { S.sources = S.sources.filter(function (s) { return s.id != d }); save(); syncScanner(); srcs() } });
